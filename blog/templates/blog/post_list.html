@@ -10,7 +10,18 @@
     <div>
         <h1><a href="/">Blog Django Girls</a> </h1>
     </div>
+
+    
+    {% for post in posts  %}
     <div>
+        <p>Publicado : {{post.published_date}}</p>
+        
+        <h2><a href="/">{{post.title}}</a></h2>
+        <p>{{post.text | linebreaksbr}}</p>
+       
+    </div>
+    {% endfor %}
+    {% comment %} <div>
         <p>Publicado: 09 de Julio de 2022</p>
         <h1><a href="/">Mi Primer Post</h1></a> 
         <p>Routa para desarrolladores Backend JR</p>
@@ -20,6 +31,6 @@
         <p>Publicado: 09 de Julio de 2022</p>
         <h1><a href="/">Mi segundo post</h1></a> 
         <p>Les contaremos que Frameswork elegimos, porque lo elegimos y donde lo aprendimos</p>
-    </div>
+    </div> {% endcomment %}
 </body>
 </html>
